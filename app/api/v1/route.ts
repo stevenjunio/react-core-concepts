@@ -1,6 +1,8 @@
 import { logRequest, logResponse } from "@/app/utils/logger";
 import { NextRequest, NextResponse } from "next/server";
 
+export const runtime = "edge";
+
 export async function GET(request: NextRequest) {
   logRequest(request);
 
