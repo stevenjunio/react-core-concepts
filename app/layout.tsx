@@ -57,7 +57,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                href="/reducer"
+                href="/usereducer"
                 style={{ textDecoration: "none", color: "#007bff" }}
               >
                 useReducer
@@ -65,7 +65,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                href="/memo"
+                href="/usememo"
                 style={{ textDecoration: "none", color: "#007bff" }}
               >
                 useMemo
@@ -73,7 +73,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                href="/ref"
+                href="/useref"
                 style={{ textDecoration: "none", color: "#007bff" }}
               >
                 useRef
@@ -81,7 +81,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                href="/context"
+                href="/usecontext"
                 style={{ textDecoration: "none", color: "#007bff" }}
               >
                 useContext
@@ -89,7 +89,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                href="/state"
+                href="/usestate"
                 style={{ textDecoration: "none", color: "#007bff" }}
               >
                 useState
@@ -97,7 +97,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                href="/effect"
+                href="/useeffect"
                 style={{ textDecoration: "none", color: "#007bff" }}
               >
                 useEffect
@@ -105,7 +105,7 @@ export default function RootLayout({
             </li>
             <li>
               <Link
-                href="/props"
+                href="/useprops"
                 style={{ textDecoration: "none", color: "#007bff" }}
               >
                 Props
