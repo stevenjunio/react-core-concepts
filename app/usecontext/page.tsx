@@ -1,8 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ThemeProvider from "./ThemeProvider";
 import DisplayComponent from "./DisplayComponent";
-import { useContext } from "react";
 import ThemeContext from "./context";
 
 // Metadata
@@ -15,6 +14,7 @@ import ThemeContext from "./context";
 // Main Page Component
 export default function UseContextPage() {
   return (
+    // Wrap the content with ThemeProvider to provide the theme context to all nested components
     <ThemeProvider>
       <Content />
     </ThemeProvider>
@@ -22,10 +22,15 @@ export default function UseContextPage() {
 }
 
 function Content({}) {
+  // Grab the context with the useContext hook, this allows us to use the values coming from it
   const themeContext = useContext(ThemeContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isWarningModalOpen, setIsWarningModalOpen] = useState(false);
+
+  // In this case, the dark mode value (this will trigger re-renders across all components using this context when updated)
   const isDarkMode = themeContext ? themeContext.isDarkMode : false;
+
+  // Also pull the defined function in the context that we defined in the provider
   const toggleDarkMode = themeContext ? themeContext.toggleDarkMode : () => {};
 
   return (
@@ -42,7 +47,7 @@ function Content({}) {
       >
         <button
           type="button"
-          className="bg-green-500 text-white px-4 py-2 rounded-md mb-4"
+          className="bg-green-500 mr-4 text-white px-4 py-2 rounded-md mb-4"
           onClick={() => setIsModalOpen(true)}
         >
           Use Cases
